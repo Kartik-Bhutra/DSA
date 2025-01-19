@@ -11,6 +11,7 @@ void mergeSort(vector<int> &arr, int start, int end)
     [&]()
     {
         vector<int> vec;
+        // merge them in sorted order
         int low = start, high = mid + 1;
         while (low <= mid && high <= end)
         {
@@ -32,7 +33,12 @@ int main()
 {
     vector<int> arr = {38, 27, 43, 3, 9, 82, 10};
     mergeSort(arr, 0, arr.size() - 1);
-    for (int x : arr)
-        cout << x << " ";
+    // time complexity O(NLog(N)) and space complexity O(N)
+    [&]()
+    {
+        for (int i : arr)
+            cout << i << " ";
+        cout << "\n";
+    }();
     return 0;
 }
