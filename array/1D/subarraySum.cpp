@@ -39,7 +39,9 @@ int longestSubarraySumEqualK(vector<int> &arr, int k)
 int main()
 {
     vector<int> arr = {1, 4, -7, 5, -8, 2, -3, 5, 9, -6};
+    // time complexity is O(N) or O(Nlog(N)) and space complexity is O(N)
     cout << "totalSubarrays count : " << totalSubarraySumEqualK(arr, 3) << "\n";
+    // time complexity is O(N) or O(Nlog(N)) and space complexity is O(N)
     cout << "maximumSubarray length : " << longestSubarraySumEqualK(arr, 3) << "\n";
     return 0;
 }
