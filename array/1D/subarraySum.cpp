@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-int totalSubarraySumEqualK(vector<int> &arr, int k)
+int totalSubarraySumEqualK(vector<int> &arr, int target)
 {
     int n = arr.size();
     unordered_map<int, int> mp;
@@ -8,17 +8,17 @@ int totalSubarraySumEqualK(vector<int> &arr, int k)
     for (int i = 0; i < n; i++)
     {
         sum += arr[i];
-        if (sum == k)
+        if (sum == target)
             ans++;
-        // find the prefix sum as that + k = sum
-        if (mp.find(sum - k) != mp.end())
-            ans += mp[sum - k];
+        // find the prefix sum as that + target = sum
+        if (mp.find(sum - target) != mp.end())
+            ans += mp[sum - target];
         // all the subarray with sum : sum increase
         mp[sum]++;
     }
     return ans;
 }
-int longestSubarraySumEqualK(vector<int> &arr, int k)
+int longestSubarraySumEqualK(vector<int> &arr, int target)
 {
     int n = arr.size();
     unordered_map<int, int> mp;
@@ -26,10 +26,10 @@ int longestSubarraySumEqualK(vector<int> &arr, int k)
     for (int i = 0; i < n; i++)
     {
         sum += arr[i];
-        if (sum == k)
+        if (sum == target)
             ans = max(ans, i + 1);
-        if (mp.find(sum - k) != mp.end())
-            ans = max(ans, i - mp[sum - k]);
+        if (mp.find(sum - target) != mp.end())
+            ans = max(ans, i - mp[sum - target]);
         // to find the maximum neglect zero so if it is assigned then don't change
         if (mp.find(sum) == mp.end())
             mp[sum] = i;
