@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/subarray-sum-equals-k/description/
 #include <bits/stdc++.h>
 using namespace std;
 int totalSubarraySumEqualK(vector<int> &arr, int target)

@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
 #include <bits/stdc++.h>
 using namespace std;
 pair<int, int> searchIndex(vector<int> &arr, int target)

@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/sort-colors/description/
 #include <bits/stdc++.h>
 using namespace std;
 void sort3Colors(vector<int> &arr)
@@ -5,7 +6,7 @@ void sort3Colors(vector<int> &arr)
   int zeroIdx = 0, oneIdx = 0, twoIdx = arr.size() - 1;
   while (oneIdx <= twoIdx)
   {
-    // placing all zeros at starting 
+    // placing all zeros at starting
     if (arr[oneIdx] == 0)
     {
       swap(arr[zeroIdx], arr[oneIdx]);

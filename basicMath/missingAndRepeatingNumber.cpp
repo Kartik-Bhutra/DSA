@@ -1,6 +1,6 @@
+// https://www.geeksforgeeks.org/problems/find-missing-and-repeating2512/1?
 #include <bits/stdc++.h>
 using namespace std;
-
 pair<int, int> findMissingAndRepeating(vector<int> &nums)
 {
   int n = nums.size();
@@ -18,7 +18,6 @@ pair<int, int> findMissingAndRepeating(vector<int> &nums)
   long long plus = (power2Sum - power2) / minus;
   return {(plus + minus) / 2, (plus - minus) / 2};
 }
-
 int main()
 {
   vector<int> nums = {1, 2, 2, 4};

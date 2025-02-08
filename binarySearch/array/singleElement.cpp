@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/single-element-in-a-sorted-array/description/
 #include <bits/stdc++.h>
 using namespace std;
 int singleElement(vector<int> &arr)

@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/longest-consecutive-sequence/editorial/
 #include <bits/stdc++.h>
 using namespace std;
 int longestConsecutiveSequence(vector<int> &arr)
@@ -25,7 +26,7 @@ int main()
 {
     vector<int> arr = {1, 4, 3, 100, 2, 101, 9, 10, 11, 201, 102, 5};
     cout << longestConsecutiveSequence(arr) << "\n";
-    // time complexity is O(N) as at max it can traverse the array twice 
-    // space complexity is O(N) 
+    // time complexity is O(N) as at max it can traverse the array twice
+    // space complexity is O(N)
     return 0;
 }
