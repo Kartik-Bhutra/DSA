@@ -33,7 +33,8 @@ bool find(vector<int> &arr, int target)
 int main()
 {
   vector<int> arr = {1, 0, 1, 1, 1};
-  // time complexity is O(N) and space complexity is O(1)
+  // time complexity is O(N) and space complexity is O(1) with duplicates
+  // without duplicates time complexity is O(Log(N))
   cout << find(arr, 10) << "\n";
   return 0;
 }

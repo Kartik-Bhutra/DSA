@@ -23,7 +23,8 @@ int peakElement(vector<int> &arr)
 int main()
 {
   vector<int> arr = {1, 2, 3, 1};
-  // time complexity is O(Log(N)) and space complexity is O(1)
+  // time complexity is O(N) and space complexity is O(1) with duplicates
+  // without duplicates time complexity is O(Log(N))
   cout << arr[peakElement(arr)] << "\n";
   return 0;
 }
