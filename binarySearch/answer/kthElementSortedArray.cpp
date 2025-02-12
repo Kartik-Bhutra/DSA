@@ -36,6 +36,7 @@ int kthElement(vector<int> &arr1, vector<int> &arr2, int k)
 int main()
 {
   vector<int> arr1 = {1, 2}, arr2 = {3, 4};
+  // time complexity is O(Log(N+M)) and space complexity is O(1)
   cout << kthElement(arr1, arr2, 3) << "\n";
   return 0;
 }
