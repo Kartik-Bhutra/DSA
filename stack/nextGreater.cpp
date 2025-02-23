@@ -23,6 +23,7 @@ vector<int> nextGreater(vector<int> &arr1, vector<int> &arr2)
 int main()
 {
   vector<int> arr1 = {4, 1, 2}, arr2 = {1, 3, 4, 2};
+  // time complexity O(N) and space complexity O(N)
   vector<int> ans = nextGreater(arr1, arr2);
   int n = arr1.size();
   for (int i = 0; i < n; i++)

@@ -26,6 +26,7 @@ int main()
 {
   vector<int> arr = {1, 2, 1};
   vector<int> ans = nextGreater(arr);
+  // time complexity O(N) and space complexity O(N)
   for (int x : ans)
   {
     cout << x << " ";
