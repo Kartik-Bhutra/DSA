@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/maximal-rectangle/
 #include <bits/stdc++.h>
 using namespace std;
 int maximalRectangle(vector<vector<char>> &matrix)
@@ -31,5 +32,6 @@ int maximalRectangle(vector<vector<char>> &matrix)
 }
 int main()
 {
+  // time complexity is O(N*M) and space complexity is O(N)
   return 0;
 }

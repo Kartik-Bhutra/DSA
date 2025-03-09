@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/largest-rectangle-in-arrgram/
+// https://leetcode.com/problems/largest-rectangle-in-histogram/
 #include <bits/stdc++.h>
 using namespace std;
 int largestRectangleArea(vector<int> &arr)
@@ -25,6 +25,6 @@ int largestRectangleArea(vector<int> &arr)
 }
 int main()
 {
-
+  // time complexity is O(N) and space complexity is O(N)
   return 0;
 }
