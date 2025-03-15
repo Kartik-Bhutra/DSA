@@ -1,22 +1,36 @@
 // https://leetcode.com/problems/candy/description/
 #include <bits/stdc++.h>
 using namespace std;
-int candy(vector<int> &r)
+int candy(vector<int> &ratings)
 {
-  int n = r.size();
-  int ans = 0, last = -1;
-  for (int i = 0; i < n; i++)
+
+  vector<int> left(ratings.size(), 1);
+
+  left[0] = 1;
+  for (int i = 1; i < ratings.size(); i++)
   {
-    if (i < n - 1 && r[i] <= r[i + 1])
+    if (ratings[i] > ratings[i - 1])
     {
-      ans += ((i - last) * (i - last + 1)) / 2;
-      last = i;
+      left[i] = left[i - 1] + 1;
     }
   }
-  for(int i = 0; i < n; i++){
-    if(i < n-1 && r[i] < r[i+1])  ans++;
+  int sum = left[ratings.size() - 1];
+  int r = 1;
+
+  for (int i = ratings.size() - 2; i >= 0; i--)
+  {
+    if (ratings[i] > ratings[i + 1])
+    {
+      r = r + 1;
+    }
+    else
+    {
+      r = 1;
+    }
+    sum += max(r, left[i]);
   }
-  return ans;
+
+  return sum;
 }
 int main()
 {
